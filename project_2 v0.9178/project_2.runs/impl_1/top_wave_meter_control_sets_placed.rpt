@@ -1,0 +1,88 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Jul 22 21:13:46 2026
+| Host         : DESKTOP-FT4P3P7 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_wave_meter_control_sets_placed.rpt
+| Design       : top_wave_meter
+| Device       : xc7z010
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    21 |
+| Unused register locations in slices containing registers |    49 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|     11 |            2 |
+|     12 |            3 |
+|     13 |            1 |
+|    16+ |           15 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |             142 |           48 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             505 |          166 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+---------------------------------------------------+-----------------------+------------------+----------------+
+|    Clock Signal    |                   Enable Signal                   |    Set/Reset Signal   | Slice Load Count | Bel Load Count |
++--------------------+---------------------------------------------------+-----------------------+------------------+----------------+
+|  u_lcd_clock/CLK   |                                                   | u_lcd_clock/rst_n     |                4 |             11 |
+|  u_lcd_clock/CLK   | u_lcd_timing/v_cnt                                | u_lcd_clock/rst_n     |                3 |             11 |
+|  clk_50m_IBUF_BUFG | u_xadc_reader/drp_rdy                             | u_wave_analyzer/rst_n |                4 |             12 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/cur_max[11]_i_1_n_0               | u_wave_analyzer/rst_n |                4 |             12 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/cur_min[11]_i_1_n_0               | u_wave_analyzer/rst_n |                6 |             12 |
+|  clk_50m_IBUF_BUFG | u_xadc_reader/measure_valid                       | u_wave_analyzer/rst_n |                7 |             13 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/mid_code                          | u_wave_analyzer/rst_n |                9 |             21 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/amp_code[11]_i_1_n_0              | u_wave_analyzer/rst_n |               11 |             27 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/center_count_gate[31]_i_1_n_0     | u_wave_analyzer/rst_n |                4 |             32 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/diff_big_count_gate[31]_i_1_n_0   | u_wave_analyzer/rst_n |               12 |             32 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/diff_count_gate[31]_i_1_n_0       | u_wave_analyzer/rst_n |                7 |             32 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/diff_small_count_gate[31]_i_1_n_0 | u_wave_analyzer/rst_n |               12 |             32 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/edge_count_gate[31]_i_1_n_0       | u_wave_analyzer/rst_n |                8 |             32 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/edge_dead_cnt[31]_i_1_n_0         | u_wave_analyzer/rst_n |               13 |             32 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/high_count_gate[31]_i_1_n_0       | u_wave_analyzer/rst_n |                5 |             32 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/last_rise_clk                     | u_wave_analyzer/rst_n |                8 |             32 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/mid_count_gate[31]_i_1_n_0        | u_wave_analyzer/rst_n |               14 |             32 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/peak_count_gate[31]_i_1_n_0       | u_wave_analyzer/rst_n |               12 |             32 |
+|  clk_50m_IBUF_BUFG | u_xadc_reader/test_mode_reg_reg_rep__20           | u_wave_analyzer/rst_n |                9 |             33 |
+|  clk_50m_IBUF_BUFG | u_wave_analyzer/freq_hz[31]_i_1_n_0               | u_wave_analyzer/rst_n |               18 |             44 |
+|  clk_50m_IBUF_BUFG |                                                   | u_wave_analyzer/rst_n |               44 |            131 |
++--------------------+---------------------------------------------------+-----------------------+------------------+----------------+
+
+
